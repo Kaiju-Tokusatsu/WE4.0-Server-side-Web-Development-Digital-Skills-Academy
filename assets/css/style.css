@@ -1,0 +1,96 @@
+/**********************************************************
+* Author: Thomas Canham
+* Assignment: WE4.0 Server-side Web Development, Digital Skills Academy
+* Student ID: D15126979
+* Date : 2016/07/30
+* Ref: n/a
+***********************************************************/
+*{
+    padding:0;
+    margin:0;
+}
+
+#container{
+    width:80%;
+    margin:auto;
+    padding-top: 20px;
+}
+
+header{
+    min-height: 60px;
+    background: blue;
+    text-align: center;
+    padding: 10px;
+    border: 3px solid black;
+    color:#fff;
+}
+header h1{
+    width:60%;
+    min- height:50px;
+    padding:10px;
+    margin:auto;
+    border: 3px solid #fff;
+   
+}
+
+#main-content{
+   padding-top: 20px;
+}
+
+.content{
+    width:46%;
+    min-height:200px;
+    padding:10px;
+    border: 1px solid black;
+}
+
+.content-right{
+    float:right;
+    margin-right: 1%;
+}
+
+.content-left{
+    float:left;
+    margin-left: 1%;
+}
+
+.end-point{
+    width:95%;
+    height:40px;
+    margin:20px auto;
+    text-align: center;
+    padding: 10px;
+    background:#959595;
+    border: 1px solid black;
+    color:#fff;
+}
+
+.address{
+    font-size: 1.2em;
+}
+
+@media only screen and (max-width : 995px) {
+     .content-right{
+         float:none;
+         margin-right: 0;
+    }
+
+    .content-left{
+         float:none;
+         margin-left: 0;
+    } 
+    
+    .content{
+        margin:auto;
+        width:95%;
+    }
+}
+@media only screen and (max-width : 495px) {
+    .address{
+        font-size: 1em;
+    }
+    .end-point{
+        height: 55px;
+    }
+}
+

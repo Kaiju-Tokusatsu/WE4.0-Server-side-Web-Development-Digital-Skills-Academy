@@ -1,0 +1,207 @@
+<!--
+/**********************************************************
+* Author: Thomas Canham
+* Assignment: WE4.0 Server-side Web Development, Digital Skills Academy
+* Student ID: D15126979
+* Date : 2016/07/30
+* Ref: n/a
+***********************************************************/
+-->
+
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>1980's Fords</title>
+		<link rel="stylesheet" href="css/style.css" />
+		<link rel="stylesheet" href="themes/granada.css" />
+		<link rel="stylesheet" href="themes/jquery.mobile.icons.min.css" />
+		<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile.structure-1.4.5.min.css" />
+		<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+		<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+	</head>
+	<body>
+	<!--This is the first page -->
+			<div data-role="page">
+			<!-- Start of the panel which is positioned to the right of the page and set to display over the page, it can not be closed by clicking on the page-->
+				<div data-role="panel" id="mypanel" data-position="right" data-display="overlay" data-dismissible="false">
+					<div class="siteInfoPanel">
+						<p>This application highlights the Ford models produced during the nineteen eighties.</p>
+						<p>To view a car simply type a ford model such as Granada or Capri into the search box</p>
+						<p>If a car is available to view, a link to it will appear, click the link to view the car.</p>
+						<!-- This list is populated dynamically from data in the cars.json file-->
+						<ul id="panelCarList">
+						<li>List of available 1980's Ford Models to view</li>
+						</ul>
+						<a href="#mypanel" id="sidePanelClose">Close List</a><!-- Button to close the panel -->
+					</div>	
+				</div>
+				<!-- End of panel -->
+				<div data-role="header" class="header">
+				<a href="#mypanel" id="sideButton">Car List</a><!-- Button to open panel-->
+					<div id = "logoHolder">
+						<img src="images/Ford_logo.png">
+					</div>
+				</div>
+				<div data-role="content"><!-- This div holds the content to be viewed on the first page -->
+					<h2 id="frontHeader">1980's Fords</h2>
+					<!-- This list is populated dynamically from data in the cars.json file it contains the links to the pages-->
+					<ul data-role="listview" id="carList"data-filter="true" data-filter-reveal="true">
+						<li data-role="list-divider" data-theme="granada" role="heading">Cars available to view</li>
+					</ul>
+					<section id="frontPage">
+						<img src="images/frontpage.jpg">
+					</section>
+				</div>
+				<div data-role="footer" id="footer">
+					<img src="images/Ford_logo.png">
+				</div>
+			</div>
+	<!--This is the Granada page -->
+			<div data-role="page" id="Granada">
+				<div data-role="header">
+					<a href="#" data-rel="back" data-role="button" id="pageButton">Go back</a><!-- Button to return to the first page-->
+					 <h1 class="pageHeader">Granada</h1> 
+				</div>
+				<div data-role="content" class="pageContent">
+					<div class="carImgHolder">
+						<img src="images/granada1.jpg">
+					</div>
+					<p>Model: Granada Mk2 Facelift</p>
+					<p>Year: 1982</p>
+					<p>Body style: Saloon</p>
+					<p>Variant: 2.8i Ghia ex</p>
+					<h4>My personal favourate (I still own one), also much favoured by criminals in the 80's!</h4>
+				</div>
+				<div data-role="footer" data-position="fixed" id="footer">
+					<img src="images/Ford_logo.png">
+				</div>
+			</div>
+	<!--This is the Capri page -->
+			<div data-role="page" id="Capri">
+				<div data-role="header">
+					<a href="#" data-rel="back" data-role="button">Go back</a>
+					<h1 class="pageHeader">Capri</h1>
+				</div>
+				<div data-role="content" class="pageContent">
+					<div class="carImgHolder">
+						<img src="images/capri1.jpg">
+					</div>
+					<p>Model: Capri Mk 4</p>
+					<p>Year: 1982</p>
+					<p>Body style: Hatchback</p>
+					<p>Variant: 1.6 lx</p>
+					<h4>A great car to drive, however it needed a good amount of weight in the boot to keep it on the road when cornering fast.</h4>
+				</div>
+				<div data-role="footer" data-position="fixed" id="footer">
+					<img src="images/Ford_logo.png">
+				</div>
+			</div>
+	<!--This is the Cortina page -->
+			<div data-role="page" id="Cortina">
+				<div data-role="header">
+					<a href="#" data-rel="back" data-role="button">Go back</a>
+					<h1 class="pageHeader">Cortina</h1>
+				</div>
+				<div data-role="content" class="pageContent">
+					<div class="carImgHolder">
+						<img src="images/cortina1.jpg">
+					</div>
+					<p>Model: Cortina Mk5</p>
+					<p>Year: 1981</p>
+					<p>Body style: Saloon</p>
+					<p>Variant: 1.6 Carousel</p>
+					<h4>A popular family car, The Mk 5 was the last varient, unfortunately superseded by the bland Sierra</h4>
+				</div>
+				<div data-role="footer" data-position="fixed" id="footer">
+					<img src="images/Ford_logo.png">
+				</div>
+			</div>
+	<!--This is the Escort page -->
+			<div data-role="page" id="Escort">
+				<div data-role="header">
+					<a href="#" data-rel="back" data-role="button">Go back</a>
+					<h1 class="pageHeader">Escort</h1>
+				</div>
+				<div data-role="content" class="pageContent">
+					<div class="carImgHolder">
+						<img src="images/escort2.jpg">
+					</div>
+					<p>Model: Escort Mk 4</p>
+					<p>Year: 1985</p>
+					<p>Body style: Hatchback</p>
+					<p>Variant: XR3i</p>
+					<h4>Every boy racers dream car in the 80's, the Escort was eventually replaced by the Focus.</h4>
+				</div>
+				<div data-role="footer" data-position="fixed" id="footer">
+					 <img src="images/Ford_logo.png">
+				</div>
+			</div>
+	<!--This is the Fiesta page -->
+			<div data-role="page" id="Fiesta">
+				<div data-role="header"><a href="#" data-rel="back" data-role="button">Go back</a>
+					<h1 class="pageHeader">Fiesta</h1>
+				</div>
+				<div data-role="content" class="pageContent">
+					<div class="carImgHolder">
+						<img src="images/fiesta1.jpg">
+					</div>
+					<p>Model: Fiesta Mk 3</p>
+					<p>Year: 1986</p>
+					<p>Body style: Hatchback</p>
+					<p>Variant: 1.6 Sport</p>
+					<h4>The Fiesta is a great little family runaround that is still in production today as the Mk 7 version.</h4>
+				</div>
+				<div data-role="footer" data-position="fixed" id="footer">
+					<img src="images/Ford_logo.png">
+				</div>
+			</div>
+	<!--This is the Sierra page -->
+			<div data-role="page" id="Sierra">
+				<div data-role="header">
+					<a href="#" data-rel="back" data-role="button">Go back</a>
+					<h1 class="pageHeader">Sierra</h1>
+				</div>
+				<div data-role="content" class="pageContent">
+					<div class="carImgHolder">
+						<img src="images/sierra2.jpg">
+					</div>
+					<p>Model: Sierra</p>
+					<p>Year: 1987</p>
+					<p>Body style: Hatchback</p>
+					<p>Variant: Cosworth</p>
+					<h4>Though the Sierra was the successor to the Cortina, It was still a Cortina underneath</h4>
+				</div>
+				<div data-role="footer" id="footer">
+					<img src="images/Ford_logo.png">
+				</div>
+			</div>
+	<!--This is the Orion page -->
+			<div data-role="page" id="Orion">
+				<div data-role="header"><a href="#" data-rel="back" data-role="button">Go back</a>
+					<h1 class="pageHeader">Orion</h1>
+				</div>
+				<div data-role="content" class="pageContent">
+					<div class="carImgHolder">
+						<img src="images/orion2.jpg">
+					</div>
+					<p>Model:Orion Mk 2</p>
+					<p>Year: 1988</p>
+					<p>Body style: Saloon</p>
+					<p>Variant: 1.6s</p>
+					<h4>Not Fords finest car, An Escort with a boot. However the performance of the 1.6 sport was surprising good</h4>
+				</div>
+				<div data-role="footer" data-position="fixed" id="footer">
+					<img src="images/Ford_logo.png">
+				</div>
+			</div>	
+		<script src="js/script.js"></script><!-- Load the scripts to run the page-->
+	</body>
+</html>
+
+
+
+
+
+
+
